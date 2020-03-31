@@ -1,0 +1,130 @@
+*
+{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body
+{
+  height: 2000px;
+  font-family:"CasualFont";
+  background-image: radial-gradient(circle farthest-corner at 50% 30%,  rgba(251,221,19,1) 20%, rgba(247, 161, 33, 0.781) 90% );
+}
+
+
+#Entire_Menu
+{
+  /* #Entire_Menu contains the #Hamburger_Menu and the #List. TO DO: Modify for desktop view (change width heigh margin) */
+  position: sticky;
+  width: 50px;
+  height: 40px;
+  margin: 30px 0px 20px 20px;
+  cursor: pointer;
+}
+
+.Bars 
+{
+  /* .Bars modifies properties to Bar_1, Bar_2 and Bar_3. The height is set to 33.3% because every 1 of the 3rd bar should have 1 of the 3rd space of the parent container which is #Hamburger_Menu that inherits the dimensions from #Entire_Menu. Transition is used after we double-click on the #Entire_Menu so that the bars change smoothly to the normal position */
+  width: 100%;
+  height: 33.3%;
+  border-radius: 10px;
+  transition: 0.5s ease;
+  background-color: crimson;
+}
+#Bar_1
+{
+  transform: translateY(-4px)
+}
+
+#Bar_3
+{
+  transform: translateY(4px)
+}
+
+.Class_For_Animation .Bars
+{
+  /* When Class_For_Animation is toggled, .Bars is modified with the property below. TO DO : insert this color below: rgba(251,221,19,1) */
+  background-color: blue;
+}
+
+.Class_For_Animation #Bar_1
+{
+  transform: translateY(13px) rotateZ(-45deg);
+  transition: 0.5s;
+}
+
+.Class_For_Animation #Bar_2
+{
+  opacity: 0%;
+}
+
+.Class_For_Animation #Bar_3
+{
+  transform: translateY(-13px) rotateZ(45deg);
+  transition: 0.5s;
+}
+
+.List li
+{
+  padding-top: 15px;
+  list-style: none;
+}
+
+.List li a
+{
+
+  text-decoration: none;
+  color: crimson;
+}
+
+.List li a:hover
+{
+  font-weight: bold;
+}
+
+.List
+{
+  /* The width will be 3 times more than #Entire_Menu in order to better arange the elements of the list. I will not include this in .Class_For_Animation .List since it's more natural to see the properties in the origin container. Same with #Entire_Menu_Background */
+  display: none;
+  width:300%;
+}
+
+.Class_For_Animation .List
+{
+  display:block;
+}
+
+#Entire_Menu_Background
+{
+  display: none;
+}
+.Class_For_Animation #Entire_Menu_Background
+{
+  z-index: 1;
+  top:0;
+  left:0;
+  position: absolute;
+  /* display: block; TO DO*/
+}
+
+@media only screen and (max-width: 764px)
+{
+  #Entire_Menu
+  {
+    top: 30px;
+  }
+}
+
+@font-face 
+{
+  font-family: CasualFont;
+  src: url(../Fonts/script1-script-casual-normal.ttf);
+
+}
+
+@font-face
+{
+  font-family: DancingFont;
+  src: url(../Fonts/DancingScript-Regular.otf);
+}

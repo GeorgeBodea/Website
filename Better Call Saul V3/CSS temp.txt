@@ -1,0 +1,121 @@
+*
+{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body
+{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: cadetblue;
+}
+
+#menu
+{
+  width: 70px;
+  height: 60px;
+  margin: 60px 0px 40px 40px;
+  cursor: pointer;
+}
+
+.bar
+{
+  height: 10px;
+  width: 100%;
+  background-color: #d151c6;
+  display: block;
+  border-radius:5px;
+  transition: 0.4s ease;
+}
+
+#bar1
+{
+  transform: translateY(-4px);
+}
+
+#bar3
+{
+  transform: translateY(4px);
+}
+
+.change .bar
+{
+  background-color: darkgreen;
+}
+
+.change #bar1
+{
+  transform:translateY(12px)rotateZ(-45deg);
+}
+.change #bar2
+{
+  opacity: 0;
+}
+.change #bar3
+{
+  transform: translateY(-8px) rotate(45deg);
+}
+
+.nav
+{
+  padding: 0px;
+  margin: 0px 20px;
+  transition: 0.4s ease;
+  display: none;
+}
+
+.nav li
+{
+  list-style: none;
+  padding: 16px 0;
+}
+.nav li a
+{
+  color: #ffff;
+  text-decoration: none;
+}
+
+.nav li a:hover
+{
+  font-weight: bold;
+}
+
+.change
+{
+  display: block;
+}
+
+.menu-bg, #menu-bar
+{
+  top:0px;
+  left:0px;
+  position: absolute;
+}
+
+
+.menu-bg
+{
+  z-index: 1;
+  width: 0px;
+  height: 0px;
+  background: radial-gradient(ellipse,#e94498,#b81568);
+  transition:0.4s ease;
+  border-radius: 50%;
+  margin: 60px 0px 40px 40px;
+}
+
+#menu-bar
+{
+  z-index: 2;
+}
+.change-bg
+{
+  width:  550px;
+  height: 540px;
+  transform: translate(-60%,-30%);
+}
+
+@media only screen and (max-width: 1300px) 
+{
+
+}
