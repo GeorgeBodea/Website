@@ -32,6 +32,12 @@ body
   position: fixed;
 }
 
+#Hamburger_Menu
+{
+  width: 50px;
+  height: 40px;
+}
+
 .Bars 
 {
   /* .Bars modifies properties to Bar_1, Bar_2 and Bar_3. The height is set to 33.3% because every 1 of the 3rd bar should have 1 of the 3rd space of the parent container which is #Hamburger_Menu that inherits the dimensions from #Entire_Menu. Transition is used after we double-click on the #Entire_Menu so that the bars change smoothly to the normal position */
@@ -179,7 +185,6 @@ img
 {
   margin: 60px 70px;
   font-size: 30px;
-  font-weight: light;
 }
 
 .Word_Blue
@@ -199,6 +204,11 @@ footer
   margin-top: 150px;
 }
 
+#Click_Link{
+  cursor: pointer;
+  text-decoration: none;
+  color: crimson;
+}
 
 #New_Song
 {
@@ -242,7 +252,7 @@ footer
 
 #Call_Now_Poster
 {
-  width: 600px;
+  width: 350px;
   height: initial;
 }
 
@@ -284,6 +294,10 @@ input
   #Entire_Menu_Background
   {
     display: none;
+  }
+
+  #Yes,#No{
+    cursor: pointer;
   }
 
   .List
@@ -361,6 +375,11 @@ input
     height: 30vw;
   }
   
+  #Call_Now_Poster
+  {
+    width: 600px;
+  }
+
   video
   {
     width: 50vw;

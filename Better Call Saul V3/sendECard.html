@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -35,7 +36,7 @@
 </div>
 
 <a href="index.html">
-  <img src="./Photos/BetterCallSaulLogo.png" id="BCSLogo">
+  <img id="BCSLogo" src="./Photos/BetterCallSaulLogo.png" alt="BCSLogoNotShowing">
 </a>
 
 
@@ -43,56 +44,66 @@
 
 <p>Did you like my services? Want to surprise your friends? It's someone's birthday party and you haven't bought anything?  Send a gift card!!!:</p>
 
-<h1>Option</h1>
+<h1>Options</h1>
 
-<p>Drug problem <input type="checkbox" checked="checked"></p> 
+<p id="Drug_Problem">Drug Problem <input type="checkbox" value="red"></p> 
 
-<p>Incestuous Love <input type="checkbox"></p> 
+<p id="Incestuous_Love">Incestuous Love <input type="checkbox" value="red"></p> 
 
-<p>Cheating Problems <input type="checkbox"></p>
+<p id="Cheating_Problems">Cheating Problems <input type="checkbox" value="red"></p>
 
-<p>Warrant Out <input type="checkbox"> </p>
+<p id="Warrant_Out" >Warrant Out <input type="checkbox" value="red"> </p>
 
 
-<h1>TO:</h1>
-<form>
+<form id="ECards_Form" onsubmit="return false">
+  <h1>TO:</h1>
+  <p>(Enter your friend 's email:)</p>
 
-  <p for="email">(Enter your email:)</p>
+  <input id="Email_Box" type="email">
 
-  <input type="email" id="email">
-
-  <input type="submit">
+  <input onclick="Sending_ECards()" id="Submit_Box" type="submit">
 
 </form>
 
+<h1>Check one of my sponsors: </h1>
+<h1><a onclick="Change_Link_Address()" id="Click_Link" target="_blank">Click here</a></h1>
 
-<img  src="Photos/E Cards/DrugProblem.jpg">
 
-<img src="Photos/E Cards/IncestuousLove.jpg">
+<img  src="Photos/E-Cards/DrugProblem.jpg" alt="DPNotShowing">
 
-<img  src="Photos/E Cards/WarrantOut.jpg">
+<img src="Photos/E-Cards/IncestuousLove.jpg" alt="ILNotShowing">
 
-<img  src="Photos/E Cards/CheatingProblems.jpg">
+<img  src="Photos/E-Cards/WarrantOut.jpg" alt="WONotShowing">
+
+<img  src="Photos/E-Cards/CheatingProblems.jpg" alt="CPNowShowing">
 
 <h1>Advice:</h1>
-<video src="./Videos/How to Get Out of Jury Duty.mp4" poster="./Photos/OutOfJuryDuty.jpg" controls>
+<video src="./Videos/OutOfJuryDuty.mp4" poster="./Photos/OutOfJuryDuty.jpg" controls>
 </video>
 
 <p>You like my handsome tie? Look how is done:</p>
 
-<video src="./Videos/How to Tie a Tie with Saul Goodman.mp4" poster="./Photos/HowToTieATie.png" controls>
+<video src="./Videos/TieATie.mp4" poster="./Photos/HowToTieATie.png" controls>
 </video>
 
-<section>
+<p>
+  
+  Do you like what you've seen so far? <span id="Yes">Yes</span> or <span id="No">No</span> will do.
+
+</p>
+
+<h2>
+
 Play and share this song with your friends for FREE:
-</section>
+
+</h2>
 
 <iframe src="https://www.youtube.com/embed/bl4jxjNsh7M"
 width="300" height="300">
 </iframe>
 
 <footer>
-  Copyright © 2020 It's All Good Man. All Rights Reserved
+  Copyright © 2020 It's All Good Man. <span id="Rights" onclick="Display_Txt_File()">All Rights Reserved</span>
 </footer>
 
 </body>
